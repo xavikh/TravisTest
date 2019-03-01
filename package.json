@@ -4,12 +4,14 @@
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
-    "test": "eslint . --fix --ext .js --ext .json && istanbul cover ./node_modules/mocha/bin/_mocha tests/* -- --reporter lcovonly --exit -R spec"
+    "test": "eslint . --fix --ext .js --ext .json && istanbul cover ./node_modules/mocha/bin/_mocha test/* -- --reporter lcovonly --exit -R spec"
   },
   "dependencies": {
     "body-parser": "^1.18.3",
     "express": "~4.16.0",
-    "mongoose": "^5.3.4"
+    "mongoose": "^5.3.4",
+    "cors": "^2.8.5",
+    "morgan": "^1.9.1"
   },
   "devDependencies": {
     "istanbul": "^0.4.5",
