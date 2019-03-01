@@ -4,14 +4,22 @@
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
-    "test": "./node_modules/.bin/mocha"
+    "test": "eslint . --fix --ext .js --ext .json && istanbul cover ./node_modules/mocha/bin/_mocha tests/* -- --reporter lcovonly --exit -R spec"
   },
   "dependencies": {
-    "express": "~4.16.0"
+    "body-parser": "^1.18.3",
+    "express": "~4.16.0",
+    "mongoose": "^5.3.4"
   },
   "devDependencies": {
+    "istanbul": "^0.4.5",
+    "coveralls": "^3.0.3",
+    "eslint": "^5.7.0",
+    "eslint-plugin-json": "^1.2.1",
     "chai": "^4.2.0",
     "mocha": "^6.0.2",
-    "supertest": "^3.4.2"
+    "mocha-lcov-reporter": "^1.3.0",
+    "supertest": "^3.4.2",
+    "nodemon": "^1.18.10"
   }
 }
